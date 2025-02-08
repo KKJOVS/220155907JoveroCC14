@@ -1,0 +1,211 @@
+/* This is my about section, made it to start below the navbar */
+.about-section {
+    padding: 120px 2rem 4rem;
+    background-color: #f4f4f4;
+    min-height: 100vh;
+}
+
+/* I use CSS Grid to make this layout */
+.about-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* To make it good, I added border effect to my profile picture */
+.profile-image img {
+    width: 100%;
+    max-width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 5px solid #00ff9d; /* For exclusivity, I use green to represent me */
+    object-fit: cover;
+}
+
+.about-text h1 {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.about-text p {
+    margin-bottom: 1.5rem;
+    color: #666;
+}
+
+.education-item {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+.education-item h3 {
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.certifications {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.cert-item {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+.cert-item i {
+    color: #00ff9d;
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+/* Hobbies Section */
+.hobbies-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.hobby-card {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.hobby-card:hover {
+    transform: translateY(-5px);
+}
+
+.hobby-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.hobby-info {
+    flex: 1;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hobby-info h3 {
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.hobby-info p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-image {
+        margin-bottom: 2rem;
+    }
+
+    .hobbies-container {
+        grid-template-columns: 1fr;
+    }
+} 
+
+.education-timeline {
+    position: relative;
+    padding: 20px 0;
+    margin: 20px 0;
+}
+
+.education-timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background: #3498db;
+}
+
+.education-item {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 30px;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -5px;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #3498db;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.skill-tag {
+    background: #3498db;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9em;
+}
+
+.cert-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    background: #f8f9fa;
+    transition: transform 0.2s;
+}
+
+.cert-item:hover {
+    transform: translateX(10px);
+}
+
+.cert-icon {
+    color: #3498db;
+    font-size: 1.5em;
+}
+
+.cert-details h4 {
+    margin: 0;
+    color: #2c3e50;
+}
+
+.cert-date {
+    color: #666;
+    font-size: 0.9em;
+    margin: 5px 0 0 0;
+} 
